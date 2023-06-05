@@ -11,8 +11,6 @@ const router = Router();
  *     responses:
  *       200:
  *         description: OK
- *     tags:
- *       - Users
  */
 router.get("/users", getAllUsers);
 
@@ -27,12 +25,11 @@ router.get("/users", getAllUsers);
  *         required: true
  *         schema:
  *           type: integer
+ *           example: 1
  *         description: The user ID.
  *     responses:
  *       200:
  *         description: OK
- *     tags:
- *       - Users
  */
 router.get("/users/:id", user);
 
@@ -54,8 +51,6 @@ router.get("/users/:id", user);
  *     responses:
  *       201:
  *         description: Created
- *     tags:
- *       - Users
  */
 router.post("/users", post);
 
@@ -70,6 +65,7 @@ router.post("/users", post);
  *         required: true
  *         schema:
  *           type: integer
+ *           example: 1
  *         description: The user ID.
  *     requestBody:
  *       content:
@@ -84,8 +80,6 @@ router.post("/users", post);
  *     responses:
  *       200:
  *         description: OK
- *     tags:
- *       - Users
  */
 router.put("/users/:id", put);
 
@@ -100,12 +94,11 @@ router.put("/users/:id", put);
  *         required: true
  *         schema:
  *           type: integer
+ *           example: 1
  *         description: The user ID.
  *     responses:
  *       200:
  *         description: OK
- *     tags:
- *       - Users
  */
 router.delete("/users/:id", del);
 
